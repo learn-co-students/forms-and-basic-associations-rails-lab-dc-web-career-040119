@@ -3,6 +3,7 @@ require 'capybara/rspec'
 
 describe "the song form", :type => :feature do
   it "creates a song on submit" do
+    byebug
     visit '/songs/new'
     fill_in :song_title, with: 'Little Earthquakes'
     find('input[name="commit"]').click
@@ -10,6 +11,7 @@ describe "the song form", :type => :feature do
   end
 
   it "creates a song with an artist" do
+    byebug
     visit '/songs/new'
     fill_in :song_title, with: 'Little Earthquakes'
     fill_in :song_artist_name, with: 'Tori Amos'
@@ -19,6 +21,7 @@ describe "the song form", :type => :feature do
   end
 
   it 'creates a song with a genre' do
+    byebug
     visit '/songs/new'
     fill_in :song_artist_name, with: 'Tori Amos'
     fill_in :song_title, with: 'Little Earthquakes'
@@ -29,6 +32,7 @@ describe "the song form", :type => :feature do
   end
 
   it 'creates a song with notes' do
+    byebug
     visit '/songs/new'
     fill_in :song_title, with: 'Little Earthquakes'
     fill_in :song_notes_1, with: 'great piano'
